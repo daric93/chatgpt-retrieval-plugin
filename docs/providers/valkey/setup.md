@@ -27,7 +27,7 @@
 In order to test your changes to the Valkey Datastore, you can run the following commands:
 
 ```bash
-# Run Valkey with search capabilities (using Redis Stack image until Valkey Stack is available)
+# Run Valkey with search capabilities
 docker run -it --rm -p 6379:6379 valkey/valkey-bundle:latest
 ```
     

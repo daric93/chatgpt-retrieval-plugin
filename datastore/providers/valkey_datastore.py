@@ -74,7 +74,8 @@ class ValkeyDataStore(DataStore):
             addresses = [NodeAddress(VALKEY_HOST, VALKEY_PORT)]
             config = GlideClientConfiguration(
                 addresses,
-                credentials=ServerCredentials(password=VALKEY_PASSWORD) if VALKEY_PASSWORD else None
+                credentials=ServerCredentials(password=VALKEY_PASSWORD) if VALKEY_PASSWORD else None,
+                client_info_tag="openai-retrieval-plugin",
             )
             client = await GlideClient.create(config)
         except Exception as e:
